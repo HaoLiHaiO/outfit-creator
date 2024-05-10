@@ -1,8 +1,16 @@
+import { useState } from "react";
+import { GenderSelection } from "./components/gender-selection/GenderSeledction";
+
 function App() {
+  const [gender, setGender] = useState<string | null>(null);
 
   return (
     <>
-      <h1>Hello</h1>
+      {!gender ? (
+        <GenderSelection setGender={setGender} />
+      ) : (
+        <div>A gender has been selected.</div>
+      )}
     </>
   );
 }
