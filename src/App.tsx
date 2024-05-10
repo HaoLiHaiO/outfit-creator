@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { GenderSelection } from "./components/gender-selection/GenderSeledction";
+import { GenderSelection } from "./components/gender-selection/GenderSelection";
 
 function App() {
   const [gender, setGender] = useState<string | null>(null);
