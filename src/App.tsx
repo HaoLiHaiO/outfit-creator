@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { GenderSelection } from "./components/gender-selection/GenderSelection";
+import OutfitDisplay from "./components/outfit-display/OutfitDisplay";
 
 function App() {
   const [gender, setGender] = useState<string | null>(null);
@@ -9,7 +10,7 @@ function App() {
       {!gender ? (
         <GenderSelection setGender={setGender} />
       ) : (
-        <div>A gender has been selected.</div>
+        <OutfitDisplay gender={gender} />
       )}
     </>
   );
