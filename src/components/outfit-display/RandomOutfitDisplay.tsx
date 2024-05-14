@@ -10,7 +10,20 @@ interface IDescriptionItem {
   description: string;
 }
 
-export const RandomOutfitDisplay = ({ outfit }: IRandomOutfitElementProps) => {
+
+/**
+ * RandomOutfitDisplay Component
+ * 
+ * This component displays the details of a given outfit, including its description,
+ * price, and image. If no outfit is found, it displays a message indicating so.
+ * 
+ * @param {Object} props - The component props
+ * @param {Object} props.outfit - The outfit data to display
+ * 
+ * @returns {JSX.Element} A div containing the outfit details or a message if no outfit is found
+ */
+
+export const RandomOutfitDisplay = ({ outfit }: IRandomOutfitElementProps): JSX.Element => {
   if (!outfit) return <p>No outfit found.</p>;
 
   const getEnglishDescription = (descriptions: IDescriptionItem[]): string => {

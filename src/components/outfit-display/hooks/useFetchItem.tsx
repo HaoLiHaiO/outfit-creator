@@ -19,6 +19,20 @@ export interface IOutfitItem {
     descriptions: IDescriptionItem[];
   }
 
+/**
+ * useFetchItem Hook
+ * 
+ * This hook fetches a random outfit item from a given API endpoint based on
+ * the specified gender.
+ * It manages loading, error, and the fetched outfit state.
+ * 
+ * @param {string} endpoint - The API endpoint to fetch data from
+ * @param {string} gender - The gender parameter for fetching the outfit data
+ * 
+ * @returns {Object} An object containing the fetched outfit item, loading
+ * state, error state, and a refetch function
+ */
+
 export const useFetchItem = (endpoint: string, gender: string) => {
     const [randomOutfitElement, setRandomOutfitElement] = useState<IOutfitItem | undefined>(undefined);
     const [loading, setLoading] = useState<boolean>(true);

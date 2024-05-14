@@ -1,5 +1,18 @@
 export type CategoryKey = 'accessories' | 'tops' | 'bottoms';
 
+/**
+ * categoryConfig
+ * 
+ * Configuration object that maps category keys to their respective items for male and female.
+ * Each category contains an array of strings representing item identifiers.
+ * 
+ * The structure is as follows:
+ * - 'accessories': Contains arrays of accessory identifiers for male and female.
+ * - 'tops': Contains arrays of top identifiers for male and female.
+ * - 'bottoms': Contains arrays of bottom identifiers for male and female.
+ * 
+ * @type {Object.<CategoryKey, { male: string[], female: string[] }>}
+ */
 const categoryConfig: { [key in CategoryKey]: { male: string[]; female: string[] } } = {
     accessories: {
         male: ['Accessoires', 'WCA02305', 'WCA02306', 'WCA02304', 'WCA02303', 'WCA02308', 'WCA02309', 'WCA02307', 'WCA02301', 'WCA02302'],
