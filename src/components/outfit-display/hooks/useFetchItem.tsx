@@ -28,7 +28,8 @@ export const useFetchItem = (endpoint: string, gender: string) => {
       try {
         setLoading(true);
         setError(null);
-        const response = await fetch(`http://localhost:5000/${endpoint}?gender=${gender}`);
+        const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+        const response = await fetch(`${apiUrl}/${endpoint}?gender=${gender}`);
         if (!response.ok) throw new Error('Failed to fetch data');
         const json = await response.json();
         const randomIndex = Math.floor(Math.random() * json.items.length);
