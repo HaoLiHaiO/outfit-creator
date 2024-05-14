@@ -20,7 +20,7 @@ cd outfit-creator
 
 ## How to run
 
-- Make sure you have .env with: REACT_APP_API_URL=http://localhost:5000
+- Make sure you have .env with: VITE_API_URL=http://localhost:5000
 - It is already included in this project (not included in .gitignore) because 
 it does not contain any sensitive information.
 
