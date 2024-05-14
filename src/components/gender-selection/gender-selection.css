@@ -1,0 +1,47 @@
+.gender-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    text-align: center;
+    gap: 20px;
+    padding: 0 20px;
+  }
+  
+  .separator {
+    width: 80%;
+    height: 5px;
+    background-color: #e2001a; /* New Yorker's red! :) */
+  }
+  
+  .gender-button {
+    padding: 10px 20px;
+    font-size: 2rem;
+    color: #333333; /* New Yorker's gray :D */
+    background-color: #e2001a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .gender-button:hover {
+    background-color: #ffffff;
+  }
+  
+  @media (min-width: 768px) {
+    .gender-selection {
+      flex-direction: row;
+    }
+  
+    .separator {
+      width: 5px;
+      height: 80%;
+    }
+  
+    .gender-button {
+      font-size: 5rem;
+    }
+  }
+  

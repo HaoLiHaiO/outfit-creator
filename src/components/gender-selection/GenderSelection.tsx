@@ -1,3 +1,5 @@
+import "./gender-selection.css";
+
 type Gender = "male" | "female";
 
 interface IGenderSelectionProps {
@@ -10,14 +12,17 @@ export const GenderSelection = ({ setGender }: IGenderSelectionProps) => {
   };
 
   return (
-    <div>
-      <h2>Select a gender</h2>
-      <p>
-        This app will help you create random outfits. Please select a gender for
-        the outfits you would like to create:
-      </p>
-      <button onClick={() => handleSelection("male")}>Male</button>
-      <button onClick={() => handleSelection("female")}>Female</button>
+    <div className="gender-selection">
+      <button className="gender-button" onClick={() => handleSelection("male")}>
+        Men
+      </button>
+      <div className="separator"></div>
+      <button
+        className="gender-button"
+        onClick={() => handleSelection("female")}
+      >
+        Women
+      </button>
     </div>
   );
 };
