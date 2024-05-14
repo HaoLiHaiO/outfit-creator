@@ -30,6 +30,7 @@ This project is containerized:
 
 - docker compose build
 - docker compose up
+- navigate to localhost:5000 in the browser. The server will be running on localhost:3000 
 
 **OR** in one command:
 
