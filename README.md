@@ -16,6 +16,7 @@ Follow these steps to get the application running:
 ```sh
 git clone git@github.com:HaoLiHaiO/outfit-creator.git
 cd outfit-creator
+npm install
 ```
 
 ## How to run
