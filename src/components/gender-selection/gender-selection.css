@@ -14,14 +14,14 @@
     height: 5px;
     background-color: #e2001a; /* New Yorker's red! :) */
   }
-  
+
   .gender-button {
-    padding: 10px 20px;
+    padding: .8rem 1.4rem;
     font-size: 2rem;
     color: #333333; /* New Yorker's gray :D */
     background-color: #e2001a;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
@@ -39,9 +39,8 @@
       width: 5px;
       height: 80%;
     }
-  
+
     .gender-button {
-      font-size: 5rem;
+        font-size: 5rem;
     }
   }
-  

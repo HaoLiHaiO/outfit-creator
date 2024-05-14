@@ -1,6 +1,7 @@
 import { useCallback } from "react";
 import { RandomOutfitDisplay } from "./RandomOutfitDisplay";
 import { useFetchItem } from "./hooks/useFetchItem";
+import "./complete-outfit.css";
 
 interface ICompleteOutfitProps {
   gender: string;
@@ -28,7 +29,7 @@ export const CompleteOutfit = ({ gender, setGender }: ICompleteOutfitProps) => {
   } = useFetchItem("api/bottoms", gender);
 
   const toggleGender = () => {
-    setGender(gender === 'male' ? 'female' : 'male');
+    setGender(gender === "male" ? "female" : "male");
   };
 
   const refetchAll = useCallback(() => {
@@ -38,8 +39,8 @@ export const CompleteOutfit = ({ gender, setGender }: ICompleteOutfitProps) => {
   }, [refetchAccessories, refetchTops, refetchBottoms]);
 
   return (
-    <div>
-      <button onClick={toggleGender}>
+    <div className="complete-outfit">
+      <button className="outfit-button" onClick={toggleGender}>
         Switch to {gender === "male" ? "Female" : "Male"} Outfits
       </button>
       {(loadingAccessories || loadingTops || loadingBottoms) && (
@@ -48,10 +49,14 @@ export const CompleteOutfit = ({ gender, setGender }: ICompleteOutfitProps) => {
       {(errorAccessories || errorTops || errorBottoms) && (
         <p>Error: {errorAccessories || errorTops || errorBottoms}</p>
       )}
-      <RandomOutfitDisplay outfit={accessories} />
-      <RandomOutfitDisplay outfit={tops} />
-      <RandomOutfitDisplay outfit={bottoms} />
-      <button onClick={refetchAll}>Refresh All</button>
+      <div className="outfits-wrapper">
+        <RandomOutfitDisplay outfit={accessories} />
+        <RandomOutfitDisplay outfit={tops} />
+        <RandomOutfitDisplay outfit={bottoms} />
+      </div>
+      <button className="outfit-button" onClick={refetchAll}>
+        Refresh All
+      </button>
     </div>
   );
 };

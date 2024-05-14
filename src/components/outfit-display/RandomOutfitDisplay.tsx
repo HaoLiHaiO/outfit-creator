@@ -1,4 +1,5 @@
 import { IOutfitItem } from "./hooks/useFetchItem";
+import "./random-outfit.css"
 
 interface IRandomOutfitElementProps {
   outfit: IOutfitItem | undefined;
@@ -23,9 +24,9 @@ export const RandomOutfitDisplay = ({ outfit }: IRandomOutfitElementProps) => {
   const displayImage = cutoutImage ? cutoutImage : firstVariant.images[0];
 
   return (
-    <div>
+    <div className="random-outfit">
       <h3>{outfit.maintenance_group}: {getEnglishDescription(outfit.descriptions)}</h3>
-      <div>Price: {firstVariant.current_price} {firstVariant.currency}</div>
+      <div className="prices">Price: {firstVariant.current_price} {firstVariant.currency}</div>
       {firstVariant.images.length > 0 && (
         <img
           src={`https://api.newyorker.de/csp/images/image/public/${displayImage.key}?res=low&frame=1_1`}

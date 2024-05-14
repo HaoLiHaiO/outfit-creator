@@ -28,7 +28,7 @@ export const useFetchItem = (endpoint: string, gender: string) => {
       try {
         setLoading(true);
         setError(null);
-        const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+        const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
         const response = await fetch(`${apiUrl}/${endpoint}?gender=${gender}`);
         if (!response.ok) throw new Error('Failed to fetch data');
         const json = await response.json();
